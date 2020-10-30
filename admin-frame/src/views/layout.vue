@@ -5,7 +5,7 @@
       <!-- logo -->
       <div class="logo">
         <img src="../assets/logo1.svg" class="logoimg" :style="{ width: !collapsed ? '15%' : '50%', 'margin-left':  !collapsed ? '8%' : '25%' }">
-        <h1 v-if="!collapsed">信任管理系统</h1>
+        <h1 v-if="!collapsed">测试管理系统</h1>
       </div>
       <!-- 菜单 -->
       <naf-menu :prefix="'/frame'" :collapsed="collapsed" :menuArray="arr"></naf-menu>
