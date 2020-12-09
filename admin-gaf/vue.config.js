@@ -1,10 +1,9 @@
 const path = require("path");
 
-const frameSrc = path.resolve(__dirname);
-const baseUrl = "/admin";
+const frameSrc = path.resolve(__dirname, "../admin-frame");
 
 module.exports = {
-  publicPath: baseUrl,
+  publicPath: process.env.VUE_APP_ROOT_URL + "gaf",
   productionSourceMap: false,
 
   configureWebpack: {
@@ -18,14 +17,6 @@ module.exports = {
   },
 
   devServer: {
-    port: 4000,
-    proxy: {
-      "/admin/gaf": {
-        target: "http://localhost:4001"
-      },
-      "/admin/works": {
-        target: "http://localhost:4002"
-      }
-    }
+    port: 4001
   }
 };
